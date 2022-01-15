@@ -22,9 +22,6 @@ def menu ():
     
     print ("Thanks for using this program")
         
-    
-        
-
 
 #first reads a letter from the user, and then prints only the lines where the name starts with that letter.
 def searchname ():
@@ -75,12 +72,46 @@ def searchage ():
     return 
 
 
-
 #the program is initiated here.
 main ()
 
 
+//One can as well import functions from other files rather than rewriting the code. 
+//For example:
 
+'''
+
+import search_by_age
+import search_by_name
+
+def main():
+    menu ()
+
+def menu ():
+    print ("Welcome to the Search Wizard")
+    print ()
+    choice = int(input("""
+                      1: Search with name
+                      2: search with age
+                      0: Exit
+
+                      Please enter your choice: """))
+    
+    if choice == 1:
+        search_by_name.searchname()
+    elif choice == 2:
+        search_by_age.searchage ()
+    elif choice == 0:
+        print ("Exiting")
+    else:
+        print("Invalid choice. Exiting the program")
+    
+    print ("Thanks for using this program")
+        
+#the program is initiated here.
+main ()
+
+'''
 
 
 
