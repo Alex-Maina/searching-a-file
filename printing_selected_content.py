@@ -5,3 +5,5 @@ def searchname ():
     for line in open_file:
         if line.startswith('A'):
             print (line)
+            
+searchname ()
